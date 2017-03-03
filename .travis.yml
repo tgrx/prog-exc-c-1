@@ -18,6 +18,6 @@ addons:
       - clang-3.6
 
 script:
-  - cmake
+  - cmake ./
   - make
   - ./prog_exc_1
