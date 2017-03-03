@@ -1,0 +1,26 @@
+script:
+  - cmake ./
+  - make
+  - ./prog_exc_1
+
+language: c
+
+compiler:
+  - clang
+  - gcc
+
+dist: trusty
+sudo: required
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.6
+    packages:
+      - gcc-5
+      - g++-5
+      - clang-3.6
+
+cache:
+  apt: true
